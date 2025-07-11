@@ -1,8 +1,8 @@
 function selectApp(appName) {
   if (window.Telegram && Telegram.WebApp) {
-    Telegram.WebApp.sendData(appName);  // send selected app name to bot
-    Telegram.WebApp.close();            // close the web app
+    Telegram.WebApp.sendData(appName);
+    Telegram.WebApp.close();
   } else {
-    alert("Telegram WebApp not available.");
+    alert("Not inside Telegram WebApp");
   }
 }
