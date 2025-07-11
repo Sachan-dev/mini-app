@@ -2,14 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Telegram Mini App</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Telegram Mini App - Checkers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container text-center">
+    <h3 class="mb-4">🧪 Select a Checker</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card checker-card" onclick="sendChecker('instatext')">
+          <div class="card-body">
+            <h5 class="card-title">📝 InstaText Checker</h5>
+            <p class="card-text">Check premium status of InstaText accounts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     function sendChecker(checker) {
       if (window.Telegram && Telegram.WebApp) {
         Telegram.WebApp.sendData(checker);
-        Telegram.WebApp.close(); // ✅ Close Mini App after click
+        Telegram.WebApp.close();
+      } else {
+        alert("Telegram WebApp not available.");
       }
     }
 
@@ -18,15 +36,5 @@
       Telegram.WebApp.expand();
     }
   </script>
-</head>
-<body>
-  <div class="container">
-    <h2>Select a Checker</h2>
-    <div class="icon-grid">
-      <div class="icon-card" onclick="sendChecker('instatext')">
-        <p>📝 InstaText Checker</p>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
