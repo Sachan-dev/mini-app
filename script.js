@@ -1,8 +1,5 @@
 function selectApp(appName) {
-  if (window.Telegram && Telegram.WebApp) {
-    Telegram.WebApp.sendData(appName);
-    Telegram.WebApp.close();
-  } else {
-    alert("Telegram WebApp not available.");
-  }
+  const message = `This app activated: ${appName}`;
+  Telegram.WebApp.sendData(message);  // Send to bot
+  Telegram.WebApp.close();            // Close web app
 }
