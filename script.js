@@ -3,6 +3,6 @@ function selectApp(appName) {
     Telegram.WebApp.sendData(appName);
     Telegram.WebApp.close();
   } else {
-    alert("Not inside Telegram WebApp");
+    alert("Telegram WebApp not available.");
   }
 }
