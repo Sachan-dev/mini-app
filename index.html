@@ -9,8 +9,8 @@
     function sendChecker(checker) {
       if (window.Telegram && Telegram.WebApp) {
         Telegram.WebApp.sendData(checker);
+        Telegram.WebApp.close(); // ✅ Close Mini App after click
       }
-      alert("Now send a .txt file to the bot for checking: " + checker);
     }
 
     if (window.Telegram && Telegram.WebApp) {
