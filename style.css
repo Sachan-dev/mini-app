@@ -1,10 +1,7 @@
-body {
-      background-color: #f0f2f5;
-      padding: 30px;
-    }
-    .checker-btn {
-      width: 100%;
-      margin-bottom: 15px;
-      font-size: 18px;
-      padding: 15px;
-    }
+.bg-pink {
+  background-color: #f20087 !important;
+  cursor: pointer;
+}
+.card-header {
+  font-weight: bold;
+}
