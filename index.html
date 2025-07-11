@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telegram Mini App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Select a Platform</h2>
+    <div class="icon-grid">
+      <div class="icon-card" onclick="openPlatform('Facebook')">
+        <i class="fab fa-facebook fa-3x" style="color: #3b5998;"></i>
+        <p>Facebook</p>
+      </div>
+      <div class="icon-card" onclick="openPlatform('Instagram')">
+        <i class="fab fa-instagram fa-3x" style="color: #e4405f;"></i>
+        <p>Instagram</p>
+      </div>
+      <div class="icon-card" onclick="openPlatform('WhatsApp')">
+        <i class="fab fa-whatsapp fa-3x" style="color: #25D366;"></i>
+        <p>WhatsApp</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openPlatform(platform) {
+      alert(platform + " clicked!");
+      if (window.Telegram && Telegram.WebApp) {
+        Telegram.WebApp.sendData(platform);
+      }
+    }
+
+    if (window.Telegram && Telegram.WebApp) {
+      Telegram.WebApp.ready();
+      Telegram.WebApp.expand();
+    }
+  </script>
+</body>
+</html>
