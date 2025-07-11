@@ -1,38 +1,11 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  padding: 20px;
-}
-
-.container {
-  background: white;
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.icon-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.icon-card {
-  width: 150px;
-  height: 80px;
-  background: #eeeeee;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.icon-card:hover {
-  background: #dcdcdc;
-}
+ body {
+      background-color: #f8f9fa;
+      padding: 30px;
+    }
+    .checker-card {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .checker-card:hover {
+      background-color: #e9ecef;
+    }
